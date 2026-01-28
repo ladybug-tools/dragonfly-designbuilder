@@ -155,7 +155,7 @@ def model_to_dsbxml(
         dsbxml_str = writer_model_to_dsbxml(
             model, multiplier, no_plenum, ceil_adjacency, merge_method,
             xml_template=xml_template, program_name=program_name)
-        f_contents = dsbxml_str.encode('iso-8859-15')
+        f_contents = dsbxml_str.encode('iso-8859-15', errors='ignore')
         if output_file is None:
             b = base64.b64encode(f_contents)
             base64_string = b.decode('utf-8')
