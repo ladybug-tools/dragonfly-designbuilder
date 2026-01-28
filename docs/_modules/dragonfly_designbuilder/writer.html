@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_designbuilder.writer &#8212; dragonfly-designbuilder  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css?v=0bf093e7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=0b9525ea" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<link rel="icon" type="image/x-icon" href="https://github.com/ladybug-tools/artwork/raw/refs/heads/master/icons_bugs/ico/dragonfly.ico">
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          dragonfly-designbuilder</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cli/translate.html#dragonfly-designbuilder-translate">dragonfly-designbuilder translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../cli/translate.html#dragonfly-designbuilder-translate-model-to-dsbxml">model-to-dsbxml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dragonfly_designbuilder.html">dragonfly_designbuilder package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dragonfly_designbuilder.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dragonfly_designbuilder.cli.html">dragonfly_designbuilder.cli package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dragonfly_designbuilder.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../dragonfly_designbuilder.cli.translate.html">dragonfly_designbuilder.cli.translate module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../dragonfly_designbuilder.cli.translate.html#dragonfly_designbuilder.cli.translate.model_to_dsbxml"><code class="docutils literal notranslate"><span class="pre">model_to_dsbxml()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../dragonfly_designbuilder.cli.html#module-dragonfly_designbuilder.cli">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dragonfly_designbuilder.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dragonfly_designbuilder.writer.html">dragonfly_designbuilder.writer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../dragonfly_designbuilder.writer.html#dragonfly_designbuilder.writer.model_to_dsbxml"><code class="docutils literal notranslate"><span class="pre">model_to_dsbxml()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../dragonfly_designbuilder.writer.html#dragonfly_designbuilder.writer.model_to_dsbxml_file"><code class="docutils literal notranslate"><span class="pre">model_to_dsbxml_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dragonfly_designbuilder.html#module-dragonfly_designbuilder">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dragonfly_designbuilder.html">dragonfly_designbuilder package</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dragonfly_designbuilder.html">dragonfly_designbuilder package</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <h1>Source code for dragonfly_designbuilder.writer</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+<span class="sd">&quot;&quot;&quot;Write an inp file from a Dragonfly model.&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">division</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">honeybee_designbuilder.writer</span><span class="w"> </span><span class="kn">import</span> <span class="n">model_to_dsbxml</span> <span class="k">as</span> <span class="n">hb_model_to_dsbxml</span>
+
+
+<div class="viewcode-block" id="model_to_dsbxml">
+<a class="viewcode-back" href="../../dragonfly_designbuilder.writer.html#dragonfly_designbuilder.writer.model_to_dsbxml">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">model_to_dsbxml</span><span class="p">(</span>
+    <span class="n">model</span><span class="p">,</span> <span class="n">use_multiplier</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude_plenums</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">solve_ceiling_adjacencies</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">merge_method</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">xml_template</span><span class="o">=</span><span class="s1">&#39;Default&#39;</span><span class="p">,</span> <span class="n">program_name</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate an dsbXML string for a Model.</span>
+
+<span class="sd">    The resulting string will include all geometry (Rooms, Faces, Apertures,</span>
+<span class="sd">    Doors, Shades), all fully-detailed constructions + materials, all fully-detailed</span>
+<span class="sd">    schedules, and the room properties. It will also include the simulation</span>
+<span class="sd">    parameters. Essentially, the string includes everything needed to simulate</span>
+<span class="sd">    the model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model: A dragonfly Model for which an INP representation will be returned.</span>
+<span class="sd">        use_multiplier: Boolean to note if the multipliers on each Building</span>
+<span class="sd">            story will be passed along to the generated Honeybee Room objects</span>
+<span class="sd">            or if full geometry objects should be written for each story in the</span>
+<span class="sd">            building. (Default: True).</span>
+<span class="sd">        exclude_plenums: Boolean to indicate whether ceiling/floor plenum depths</span>
+<span class="sd">            assigned to Room2Ds should generate distinct 3D Rooms in the</span>
+<span class="sd">            translation. (Default: False).</span>
+<span class="sd">        solve_ceiling_adjacencies: Boolean to indicate whether adjacencies should</span>
+<span class="sd">            be solved between interior stories when Room2Ds perfectly match one</span>
+<span class="sd">            another in their floor plate. This ensures that Surface boundary</span>
+<span class="sd">            conditions are used instead of Adiabatic ones. (Default: True).</span>
+<span class="sd">        merge_method: An optional text string to describe how the Room2Ds should</span>
+<span class="sd">            be merged into individual Rooms during the translation. Specifying a</span>
+<span class="sd">            value here can be an effective way to reduce the number of Room volumes</span>
+<span class="sd">            in the resulting Model and, ultimately, yield a faster simulation time</span>
+<span class="sd">            with less results to manage. Note that Room2Ds will only be merged if they</span>
+<span class="sd">            form a contiguous volume across their solved adjacencies. Otherwise,</span>
+<span class="sd">            there will be multiple Rooms per zone or story, each with an integer</span>
+<span class="sd">            added at the end of their identifiers. Choose from the following options:</span>
+
+<span class="sd">            * None - No merging of Room2Ds will occur</span>
+<span class="sd">            * Zones - Room2Ds in the same zone will be merged</span>
+<span class="sd">            * PlenumZones - Only plenums in the same zone will be merged</span>
+<span class="sd">            * Stories - Rooms in the same story will be merged</span>
+<span class="sd">            * PlenumStories - Only plenums in the same story will be merged</span>
+
+<span class="sd">        xml_template: Text for the type of template file to be used to write the</span>
+<span class="sd">            dsbXML. Different templates contain different amounts of default</span>
+<span class="sd">            assembly library data, which may be needed in order to import the</span>
+<span class="sd">            dsbXML into older versions of DesignBuilder. However, this data can</span>
+<span class="sd">            greatly increase the size of the resulting dsbXML file. Choose from</span>
+<span class="sd">            the following options.</span>
+
+<span class="sd">            * Default - a minimal file that imports into the latest versions</span>
+<span class="sd">            * Assembly - the Default plus an AssemblyLibrary with typical objects</span>
+<span class="sd">            * Full - a large file with all libraries that can be imported to version 7.3</span>
+
+<span class="sd">        program_name: Optional text to set the name of the software that will</span>
+<span class="sd">            appear under a comment in the XML to identify where it is being exported</span>
+<span class="sd">            from. This can be set things like &quot;Ladybug Tools&quot; or &quot;Pollination&quot;</span>
+<span class="sd">            or some other software in which this dsbXML export capability is being</span>
+<span class="sd">            run. If None, no comment will appear. (Default: None).</span>
+
+<span class="sd">    Usage:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        import os</span>
+<span class="sd">        from ladybug_geometry.geometry3d import Point3D, Face3D</span>
+<span class="sd">        from dragonfly.model import Model</span>
+<span class="sd">        from dragonfly.building import Building</span>
+<span class="sd">        from dragonfly.story import Story</span>
+<span class="sd">        from dragonfly.room2d import Room2D</span>
+<span class="sd">        from dragonfly.roof import RoofSpecification</span>
+<span class="sd">        from dragonfly.windowparameter import SimpleWindowRatio</span>
+<span class="sd">        from honeybee.config import folders</span>
+
+<span class="sd">        # Crate an input Model</span>
+<span class="sd">        pts1 = (Point3D(0, 0, 0), Point3D(10, 0, 0),</span>
+<span class="sd">                Point3D(10, 10, 0), Point3D(0, 10, 0))</span>
+<span class="sd">        pts2 = (Point3D(10, 0, 0), Point3D(20, 0, 0),</span>
+<span class="sd">                Point3D(20, 10, 0), Point3D(10, 10, 0))</span>
+<span class="sd">        pts3 = (Point3D(0, 0, 3.25), Point3D(20, 0, 3.25),</span>
+<span class="sd">                Point3D(20, 5, 5), Point3D(0, 5, 5))</span>
+<span class="sd">        pts4 = (Point3D(0, 5, 5), Point3D(20, 5, 5),</span>
+<span class="sd">                Point3D(20, 10, 3.25), Point3D(0, 10, 3.25))</span>
+<span class="sd">        room2d_full = Room2D(</span>
+<span class="sd">            &#39;R1-full&#39;, floor_geometry=Face3D(pts1), floor_to_ceiling_height=4,</span>
+<span class="sd">            is_ground_contact=True, is_top_exposed=True)</span>
+<span class="sd">        room2d_plenum = Room2D(</span>
+<span class="sd">            &#39;R2-plenum&#39;, floor_geometry=Face3D(pts2), floor_to_ceiling_height=4,</span>
+<span class="sd">            is_ground_contact=True, is_top_exposed=True)</span>
+<span class="sd">        room2d_plenum.ceiling_plenum_depth = 1.0</span>
+<span class="sd">        roof = RoofSpecification([Face3D(pts3), Face3D(pts4)])</span>
+<span class="sd">        story = Story(&#39;S1&#39;, [room2d_full, room2d_plenum])</span>
+<span class="sd">        story.roof = roof</span>
+<span class="sd">        story.solve_room_2d_adjacency(0.01)</span>
+<span class="sd">        story.set_outdoor_window_parameters(SimpleWindowRatio(0.4))</span>
+<span class="sd">        building = Building(&#39;Office_Building_1234&#39;, [story])</span>
+<span class="sd">        model = Model(&#39;NewDevelopment1&#39;, [building])</span>
+
+<span class="sd">        # create the dsbXML string for the model</span>
+<span class="sd">        xml_str = model.to.dsbxml(model)</span>
+
+<span class="sd">        # write the final string into an dsbXML</span>
+<span class="sd">        dsbxml = os.path.join(folders.default_simulation_folder, &#39;test_file&#39;, &#39;in.xml&#39;)</span>
+<span class="sd">        with open(dsbxml, &#39;wb&#39;) as fp:</span>
+<span class="sd">            fp.write(xml_str.encode(&#39;iso-8859-15&#39;))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># convert the Dragonfly Model to Honeybee</span>
+    <span class="n">hb_model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to_honeybee</span><span class="p">(</span>
+        <span class="s1">&#39;District&#39;</span><span class="p">,</span> <span class="n">use_multiplier</span><span class="o">=</span><span class="n">use_multiplier</span><span class="p">,</span> <span class="n">exclude_plenums</span><span class="o">=</span><span class="n">exclude_plenums</span><span class="p">,</span>
+        <span class="n">solve_ceiling_adjacencies</span><span class="o">=</span><span class="n">solve_ceiling_adjacencies</span><span class="p">,</span> <span class="n">merge_method</span><span class="o">=</span><span class="n">merge_method</span><span class="p">,</span>
+        <span class="n">enforce_adj</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">enforce_solid</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># assign the floor geometry to the Honeybee Rooms from Dragonfly</span>
+    <span class="n">df_flr_geos</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># dictionary to hold the DesignBuilder floor geometry</span>
+    <span class="k">for</span> <span class="n">df_room</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">room_2ds</span><span class="p">:</span>
+        <span class="n">df_flr_geos</span><span class="p">[</span><span class="n">df_room</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_room</span><span class="o">.</span><span class="n">floor_geometry</span>
+    <span class="k">for</span> <span class="n">hb_room</span> <span class="ow">in</span> <span class="n">hb_model</span><span class="o">.</span><span class="n">rooms</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">hb_room</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">designbuilder</span><span class="o">.</span><span class="n">floor_geometry</span> <span class="o">=</span> \
+                <span class="n">df_flr_geos</span><span class="p">[</span><span class="n">hb_room</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>  <span class="c1"># possibly a 3D Room that has no Room2D geometry</span>
+            <span class="k">pass</span>
+
+    <span class="c1"># patch missing adjacencies to adiabatic in case the models is a sub-selection</span>
+    <span class="n">hb_model</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">missing_adjacencies_to_adiabatic</span><span class="p">()</span>
+
+    <span class="c1"># translate the Honeybee Model to dsbXML</span>
+    <span class="n">dsbxml_str</span> <span class="o">=</span> <span class="n">hb_model_to_dsbxml</span><span class="p">(</span>
+        <span class="n">hb_model</span><span class="p">,</span> <span class="n">xml_template</span><span class="o">=</span><span class="n">xml_template</span><span class="p">,</span> <span class="n">program_name</span><span class="o">=</span><span class="n">program_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dsbxml_str</span></div>
+
+
+
+<div class="viewcode-block" id="model_to_dsbxml_file">
+<a class="viewcode-back" href="../../dragonfly_designbuilder.writer.html#dragonfly_designbuilder.writer.model_to_dsbxml_file">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">model_to_dsbxml_file</span><span class="p">(</span>
+    <span class="n">model</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">use_multiplier</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude_plenums</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">solve_ceiling_adjacencies</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge_method</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">xml_template</span><span class="o">=</span><span class="s1">&#39;Default&#39;</span><span class="p">,</span>
+    <span class="n">program_name</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write an dsbXML file from a Dragonfly Model.</span>
+
+<span class="sd">    Note that this method also ensures that the resulting dsbXML file uses the</span>
+<span class="sd">    ISO-8859-15 encoding that is used by DesignBuilder.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model: A dragonfly Model for which an dsbXML file will be written.</span>
+<span class="sd">        output_file: The path to the XML file that will be written from the model.</span>
+<span class="sd">        use_multiplier: Boolean to note if the multipliers on each Building</span>
+<span class="sd">            story will be passed along to the generated Honeybee Room objects</span>
+<span class="sd">            or if full geometry objects should be written for each story in the</span>
+<span class="sd">            building. (Default: True).</span>
+<span class="sd">        exclude_plenums: Boolean to indicate whether ceiling/floor plenum depths</span>
+<span class="sd">            assigned to Room2Ds should generate distinct 3D Rooms in the</span>
+<span class="sd">            translation. (Default: False).</span>
+<span class="sd">        solve_ceiling_adjacencies: Boolean to indicate whether adjacencies should</span>
+<span class="sd">            be solved between interior stories when Room2Ds perfectly match one</span>
+<span class="sd">            another in their floor plate. This ensures that Surface boundary</span>
+<span class="sd">            conditions are used instead of Adiabatic ones. (Default: True).</span>
+<span class="sd">        merge_method: An optional text string to describe how the Room2Ds should</span>
+<span class="sd">            be merged into individual Rooms during the translation. Specifying a</span>
+<span class="sd">            value here can be an effective way to reduce the number of Room volumes</span>
+<span class="sd">            in the resulting Model and, ultimately, yield a faster simulation time</span>
+<span class="sd">            with less results to manage. Note that Room2Ds will only be merged if they</span>
+<span class="sd">            form a contiguous volume across their solved adjacencies. Otherwise,</span>
+<span class="sd">            there will be multiple Rooms per zone or story, each with an integer</span>
+<span class="sd">            added at the end of their identifiers. Choose from the following options:</span>
+
+<span class="sd">            * None - No merging of Room2Ds will occur</span>
+<span class="sd">            * Zones - Room2Ds in the same zone will be merged</span>
+<span class="sd">            * PlenumZones - Only plenums in the same zone will be merged</span>
+<span class="sd">            * Stories - Rooms in the same story will be merged</span>
+<span class="sd">            * PlenumStories - Only plenums in the same story will be merged</span>
+
+<span class="sd">        xml_template: Text for the type of template file to be used to write the</span>
+<span class="sd">            dsbXML. Different templates contain different amounts of default</span>
+<span class="sd">            assembly library data, which may be needed in order to import the</span>
+<span class="sd">            dsbXML into older versions of DesignBuilder. However, this data can</span>
+<span class="sd">            greatly increase the size of the resulting dsbXML file. Choose from</span>
+<span class="sd">            the following options.</span>
+
+<span class="sd">            * Default - a minimal file that imports into the latest versions</span>
+<span class="sd">            * Assembly - the Default plus an AssemblyLibrary with typical objects</span>
+<span class="sd">            * Full - a large file with all libraries that can be imported to version 7.3</span>
+
+<span class="sd">        program_name: Optional text to set the name of the software that will</span>
+<span class="sd">            appear under a comment in the XML to identify where it is being exported</span>
+<span class="sd">            from. This can be set things like &quot;Ladybug Tools&quot; or &quot;Pollination&quot;</span>
+<span class="sd">            or some other software in which this dsbXML export capability is being</span>
+<span class="sd">            run. If None, no comment will appear. (Default: None).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># make sure the directory exists where the file will be written</span>
+    <span class="n">dir_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">output_file</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">dir_name</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dir_name</span><span class="p">)</span>
+    <span class="c1"># get the string of the dsbXML file</span>
+    <span class="n">xml_str</span> <span class="o">=</span> <span class="n">model_to_dsbxml</span><span class="p">(</span>
+        <span class="n">model</span><span class="p">,</span> <span class="n">use_multiplier</span><span class="p">,</span> <span class="n">exclude_plenums</span><span class="p">,</span> <span class="n">solve_ceiling_adjacencies</span><span class="p">,</span>
+        <span class="n">merge_method</span><span class="p">,</span> <span class="n">xml_template</span><span class="p">,</span> <span class="n">program_name</span>
+    <span class="p">)</span>
+    <span class="c1"># write the string into the file and encode it in ISO-8859-15</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xml_str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;iso-8859-15&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">output_file</span></div>
+
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2026, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
