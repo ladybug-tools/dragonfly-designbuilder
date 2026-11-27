@@ -1,0 +1,6 @@
+translate
+=========
+
+.. click:: dragonfly_designbuilder.cli.translate:translate
+   :prog: dragonfly-designbuilder translate
+   :show-nested:

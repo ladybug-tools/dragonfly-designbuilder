@@ -1,0 +1,26 @@
+dragonfly\_designbuilder package
+================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dragonfly_designbuilder.cli
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dragonfly_designbuilder.writer
+
+Module contents
+---------------
+
+.. automodule:: dragonfly_designbuilder
+   :members:
+   :undoc-members:
+   :show-inheritance:
