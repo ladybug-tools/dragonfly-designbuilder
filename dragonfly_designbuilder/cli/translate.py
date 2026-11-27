@@ -4,6 +4,7 @@ import sys
 import logging
 import base64
 
+from ladybug.projectinfo import ProjectInfo
 from dragonfly.model import Model
 from dragonfly_designbuilder.writer import model_to_dsbxml as writer_model_to_dsbxml
 from dragonfly_designbuilder.writer import model_to_dsbxml_file as writer_model_to_dsbxml_file
@@ -19,6 +20,16 @@ def translate():
 @translate.command('model-to-dsbxml')
 @click.argument('model-file', type=click.Path(
     exists=True, file_okay=True, dir_okay=False, resolve_path=True))
+@click.option(
+    '--project-info', '-pi', help='Full path to a ladybug ProjectInfo JSON that '
+    'describes criteria about the project site. When specified, this will set the '
+    'BuildingOrientation using the north defined in the project info object. If '
+    'the project info contains a location, this will also be used to set the '
+    'latitude, longitude and elevation. Furthermore, all weather data attributes '
+    'in the dsbXML will be set to the closest location found in the DesignBuilder '
+    'climate library. If unspecified, a default location of San Francisco will '
+    'be used.', default=None, show_default=True,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True))
 @click.option(
     '--multiplier/--full-geometry', ' /-fg', help='Flag to note if the '
     'multipliers on each Building story will be passed along to the '
@@ -61,7 +72,7 @@ def translate():
     'of the translation. By default this will be printed out to stdout.',
     type=click.File('wb'), default='-', show_default=True)
 def model_to_dsbxml_cli(
-    model_file, multiplier, plenum, ceil_adjacency, merge_method,
+    model_file, project_info, multiplier, plenum, ceil_adjacency, merge_method,
     xml_template, program_name, output_file
 ):
     """Translate a Dragonfly Model file to a DsbXML file.
@@ -75,7 +86,8 @@ def model_to_dsbxml_cli(
         no_plenum = not plenum
         no_ceil_adjacency = not ceil_adjacency
         model_to_dsbxml(
-            model_file, full_geometry, no_plenum, no_ceil_adjacency, merge_method,
+            model_file, project_info,
+            full_geometry, no_plenum, no_ceil_adjacency, merge_method,
             xml_template, program_name, output_file
         )
     except Exception as e:
@@ -86,7 +98,8 @@ def model_to_dsbxml_cli(
 
 
 def model_to_dsbxml(
-    model_file, full_geometry=False, no_plenum=False, no_ceil_adjacency=False,
+    model_file, project_info=None,
+    full_geometry=False, no_plenum=False, no_ceil_adjacency=False,
     merge_method='None', xml_template='Default', program_name=None, output_file=None,
     multiplier=True, plenum=True, ceil_adjacency=True
 ):
@@ -94,6 +107,13 @@ def model_to_dsbxml(
 
     Args:
         model_file: Full path to a Model JSON file (DFJSON) or a Model pkl (DFpkl) file.
+        project_info: Full path to a ladybug ProjectInfo JSON that describes criteria
+            about the project site. When specified, this will set the BuildingOrientation
+            using the north defined in the project info object. If the project_info
+            contains a location, this will also be used to set the latitude, longitude
+            and elevation. Furthermore, all weather data attributes in the dsbXML will
+            be set to the closest location found in the DesignBuilder climate library.
+            If None, a default location of San Francisco will be used. (Default: None).
         full_geometry: Boolean to note if the multipliers on each Building story
             will be passed along to the generated Honeybee Room objects or if
             full geometry objects should be written for each story in the
@@ -142,19 +162,23 @@ def model_to_dsbxml(
     """
     # re-serialize the Model to Python
     model = Model.from_file(model_file)
+    if project_info is not None:
+        project_info = ProjectInfo.from_json(project_info)
     multiplier = not full_geometry
     ceil_adjacency = not no_ceil_adjacency
 
     # write out the dsbXML file
     if isinstance(output_file, str):
         writer_model_to_dsbxml_file(
-            model, output_file, multiplier, no_plenum, ceil_adjacency, merge_method,
+            model, output_file, project_info,
+            multiplier, no_plenum, ceil_adjacency, merge_method,
             xml_template=xml_template, program_name=program_name
         )
     else:
         dsbxml_str = writer_model_to_dsbxml(
-            model, multiplier, no_plenum, ceil_adjacency, merge_method,
-            xml_template=xml_template, program_name=program_name)
+            model, project_info, multiplier, no_plenum, ceil_adjacency, merge_method,
+            xml_template=xml_template, program_name=program_name
+        )
         f_contents = dsbxml_str.encode('iso-8859-15', errors='ignore')
         if output_file is None:
             b = base64.b64encode(f_contents)

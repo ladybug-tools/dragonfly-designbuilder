@@ -7,7 +7,8 @@ from honeybee_designbuilder.writer import model_to_dsbxml as hb_model_to_dsbxml
 
 
 def model_to_dsbxml(
-    model, use_multiplier=True, exclude_plenums=False, solve_ceiling_adjacencies=True,
+    model, project_info=None,
+    use_multiplier=True, exclude_plenums=False, solve_ceiling_adjacencies=True,
     merge_method='None', xml_template='Default', program_name=None
 ):
     """Generate an dsbXML string for a Model.
@@ -20,6 +21,13 @@ def model_to_dsbxml(
 
     Args:
         model: A dragonfly Model for which an INP representation will be returned.
+        project_info: An optional ladybug ProjectInfo object that describes criteria
+            about the project site. When specified, this will set the BuildingOrientation
+            using the north defined in the project info object. If the project_info
+            contains a location, this will also be used to set the latitude, longitude
+            and elevation. Furthermore, all weather data attributes in the dsbXML will
+            be set to the closest location found in the DesignBuilder climate library.
+            If None, a default location of San Francisco will be used. (Default: None).
         use_multiplier: Boolean to note if the multipliers on each Building
             story will be passed along to the generated Honeybee Room objects
             or if full geometry objects should be written for each story in the
@@ -132,12 +140,15 @@ def model_to_dsbxml(
 
     # translate the Honeybee Model to dsbXML
     dsbxml_str = hb_model_to_dsbxml(
-        hb_model, xml_template=xml_template, program_name=program_name)
+        hb_model, project_info=project_info,
+        xml_template=xml_template, program_name=program_name
+    )
     return dsbxml_str
 
 
 def model_to_dsbxml_file(
-    model, output_file, use_multiplier=True, exclude_plenums=False,
+    model, output_file, project_info=None,
+    use_multiplier=True, exclude_plenums=False,
     solve_ceiling_adjacencies=True, merge_method='None', xml_template='Default',
     program_name=None
 ):
@@ -149,6 +160,13 @@ def model_to_dsbxml_file(
     Args:
         model: A dragonfly Model for which an dsbXML file will be written.
         output_file: The path to the XML file that will be written from the model.
+        project_info: An optional ladybug ProjectInfo object that describes criteria
+            about the project site. When specified, this will set the BuildingOrientation
+            using the north defined in the project info object. If the project_info
+            contains a location, this will also be used to set the latitude, longitude
+            and elevation. Furthermore, all weather data attributes in the dsbXML will
+            be set to the closest location found in the DesignBuilder climate library.
+            If None, a default location of San Francisco will be used. (Default: None).
         use_multiplier: Boolean to note if the multipliers on each Building
             story will be passed along to the generated Honeybee Room objects
             or if full geometry objects should be written for each story in the
@@ -198,7 +216,7 @@ def model_to_dsbxml_file(
         os.makedirs(dir_name)
     # get the string of the dsbXML file
     xml_str = model_to_dsbxml(
-        model, use_multiplier, exclude_plenums, solve_ceiling_adjacencies,
+        model, project_info, use_multiplier, exclude_plenums, solve_ceiling_adjacencies,
         merge_method, xml_template, program_name
     )
     # write the string into the file and encode it in ISO-8859-15
